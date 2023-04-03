@@ -102,16 +102,3 @@ searchButton.addEventListener("click",async function(e){
 
 
 });
-
-  
-
-
-
-
-
-window.onload = function(){
-  insertMainPage(mainDefault,profileDefault);
-  
-};
-
-  

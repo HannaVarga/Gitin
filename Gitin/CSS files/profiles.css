@@ -39,7 +39,12 @@ header {
 
 h1 {
     color: var(--h1-text-color);
-    margin-left: 20px;
+    margin-left: 5px;
+}
+
+h1 a {
+    color: var(--h1-text-color);
+    font-size: 1em;
 }
 
 nav {

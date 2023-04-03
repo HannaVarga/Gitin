@@ -73,7 +73,7 @@ searchButton.addEventListener("click",async function(e){
       return` <div class="card-flex-container">
                 <div class="profile-card-container">
                   <div class="image-container"> 
-                    <a href="${item.github_url}"><img src="./Images/github icon.png" id="github-icon"></a>
+                    <a href="${item.github_url}" target="_blank"><img src="./Images/github icon.png" id="github-icon"></a>
                     <img src="${item.avatar}" id="profile-picture">
                     <img src="./Images/linkedin icon.png" id="linkedin-icon">
                   </div>

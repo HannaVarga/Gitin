@@ -59,7 +59,8 @@ searchButton.addEventListener("click",async function(e){
                         repositories: userDetails.json.public_repos,
                         location: userDetails.json.location,
                         company: userDetails.json.company, 
-                        avatar: userDetails.json.avatar_url
+                        avatar: userDetails.json.avatar_url,
+                        github_url: userDetails.json.html_url
     }
     userDetailsArray.push(userObject);
     
@@ -72,7 +73,7 @@ searchButton.addEventListener("click",async function(e){
       return` <div class="card-flex-container">
                 <div class="profile-card-container">
                   <div class="image-container"> 
-                    <img src="./Images/github icon.png" id="github-icon">
+                    <a href="${item.github_url}"><img src="./Images/github icon.png" id="github-icon"></a>
                     <img src="${item.avatar}" id="profile-picture">
                     <img src="./Images/linkedin icon.png" id="linkedin-icon">
                   </div>

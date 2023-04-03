@@ -210,3 +210,36 @@ input {
     border: 2px solid var(--accent-color);
     background-color: transparent;
 }
+
+@media (max-width:768px){
+
+    .main-container{
+        flex-direction: column-reverse;
+        align-items: center;
+        
+    }
+
+    form {
+        margin-bottom: 50px;
+
+    }
+    
+    .card-flex-container{
+
+        width: 80%;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    
+}

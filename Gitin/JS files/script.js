@@ -42,10 +42,6 @@ searchButton.addEventListener("click", async function(e) {
                 redAlert.innerText = "Thank You For Submitting!"
                 redAlert.style.color = "#AAFF00";
             };
-
-
-
-
             const userGroupArray = await getUserGroup(language, location, repos);
             console.log(userGroupArray);
             const userArray = userGroupArray.json.items.slice(0, 6);

@@ -29,7 +29,6 @@
  header {
      background-color: var(--header-bg-color);
      accent-color: var(--accent-color);
-     width: 100%;
      height: 50px;
      display: flex;
      flex-direction: row;
@@ -39,6 +38,9 @@
      border-radius: 60px;
      border: 2px solid var(--accent-color);
      margin-top: 40px;
+     position: absolute;
+     left: 0;
+     right: 0;
  }
  
  h1 {

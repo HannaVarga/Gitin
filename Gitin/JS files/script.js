@@ -60,7 +60,9 @@ searchButton.addEventListener("click",async function(e){
                         location: userDetails.json.location,
                         company: userDetails.json.company, 
                         avatar: userDetails.json.avatar_url,
-                        github_url: userDetails.json.html_url
+                        github_url: userDetails.json.html_url,
+                        repo_url: userDetails.json.html_url + '/?tab=repositories',
+                        followers_url: userDetails.json.html_url + '/?tab=followers'
     }
     userDetailsArray.push(userObject);
     
@@ -83,8 +85,8 @@ searchButton.addEventListener("click",async function(e){
                     <h4>${item.location}</h4>
                   </div>
                   <div class="btn-container">
-                    <button id="repositories-btn">Reopsitories:${item.repositories}</button>
-                    <button id="followers-btn">Followers: ${item.followers}</button>
+                    <button id="repositories-btn" onClick="window.open('${item.repo_url}');">Reopsitories:${item.repositories}</button>
+                    <button id="followers-btn" onClick="window.open('${item.followers_url}');">Followers: ${item.followers}</button>
                   </div>
                 </div>
               </div> `;

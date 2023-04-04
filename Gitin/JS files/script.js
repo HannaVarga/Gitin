@@ -43,12 +43,6 @@ searchButton.addEventListener("click", async function(e) {
             for (let i = 0; i < userArray.length; i++) {
                 const element = userArray[i].login;
                 userLoginArray.push(element);
-
-                <<
-                <<
-                <<
-                <
-                Updated upstream
                 const userObject = {
                     name: userDetails.json.name,
                     experience: userDetails.json.created_at,
@@ -59,12 +53,7 @@ searchButton.addEventListener("click", async function(e) {
                     avatar: userDetails.json.avatar_url,
                     github_url: userDetails.json.html_url,
                     repo_url: userDetails.json.html_url + '/?tab=repositories',
-                    followers_url: userDetails.json.html_url + '/?tab=followers' ===
-                        ===
-                        = >>>
-                        >>>
-                        >
-                        Stashed changes
+                    followers_url: userDetails.json.html_url + '/?tab=followers'
                 }
                 console.log(userLoginArray);
 

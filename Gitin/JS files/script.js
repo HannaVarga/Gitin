@@ -15,6 +15,28 @@ searchButton.addEventListener("click",async function(e){
   const language = document.getElementById("language-entry").value;
   const experience = document.getElementById("experience-entry").value;
   const repos= document.getElementById("repos-entry").value;
+
+  // //     //**Target the empty element within our HTML **/
+  // const redAlert = document.querySelector(".alert");
+  // //     //**Pass in a condition that checks if form is empty**/
+  // if (location == "") {
+  //     redAlert.innerText = "Please Fill Out Form";
+  //     redAlert.style.color = "red"
+  // } else if (language == "") {
+  //     redAlert.innerText = "Please Fill Out Form";
+  //     redAlert.style.color = "red"
+  // } else if (experience == "") {
+  //     redAlert.innerText = "Please Fill Out Form";
+  //     redAlert.style.color = "red"
+  // } else if (repos == "") {
+  //     redAlert.innerText = "Please Fill Out Form";
+  //     redAlert.style.color = "red"
+  // } else {
+  //     //         //**Display the user a thank you message for filling form **/
+  //     redAlert.innerText = "Thank You For Submitting!"
+  //     redAlert.style.color = "#AAFF00";
+  // };
+
   console.log(location,language,experience,repos);
   const userGroupArray = await getUserGroup(language,location,repos);
   console.log(userGroupArray);

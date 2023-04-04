@@ -1,6 +1,6 @@
 import { getUserGroup } from "./location-data.js";
 import { getUserDetails } from "./user-login-data.js";
-import { profileDefault , insertMainPage} from "./dom.js";
+import { profileDefault, insertMainPage } from "./dom.js";
 
 
 const nameContainer = document.getElementById("name-container");
@@ -15,43 +15,36 @@ const mainDefault = document.querySelector(".profile-cards-box");
 
 
 
- 
 
 
 
 
 
 
-searchButton.addEventListener("click",async function(e){
 
-  e.preventDefault();
-  const location = document.getElementById("location-entry").value;
-  const language = document.getElementById("language-entry").value;
-  const experience = document.getElementById("experience-entry").value;
-  const repos= document.getElementById("repos-entry").value;
+searchButton.addEventListener("click", async function(e) {
 
-  console.log(location,language,experience,repos);
+    e.preventDefault();
+    const location = document.getElementById("location-entry").value;
+    const language = document.getElementById("language-entry").value;
+    const experience = document.getElementById("experience-entry").value;
+    const repos = document.getElementById("repos-entry").value;
+
+    console.log(location, language, experience, repos);
 
 
 
 
-  const userGroupArray = await getUserGroup(language,location,repos);
-  console.log(userGroupArray);
-  const userArray = userGroupArray.json.items.slice(0,6);
-  console.log(userArray);
-  const userLoginArray = [];
-  for (let i = 0; i < userArray.length; i++) {
-    const element = userArray[i].login;
-    userLoginArray.push(element);
-    
-  }
-  console.log(userLoginArray);
-  
-  let userDetailsArray = [];
-  for (let i = 0; i < userLoginArray.length; i++) {
-    let userName = userLoginArray[i];
-    let userDetails = await getUserDetails(userName);
+    const userGroupArray = await getUserGroup(language, location, repos);
+    console.log(userGroupArray);
+    const userArray = userGroupArray.json.items.slice(0, 6);
+    console.log(userArray);
+    const userLoginArray = [];
+    for (let i = 0; i < userArray.length; i++) {
+        const element = userArray[i].login;
+        userLoginArray.push(element);
 
+<<<<<<< Updated upstream
     const userObject = {
                         name: userDetails.json.name,
                         experience: userDetails.json.created_at,
@@ -63,16 +56,35 @@ searchButton.addEventListener("click",async function(e){
                         github_url: userDetails.json.html_url,
                         repo_url: userDetails.json.html_url + '/?tab=repositories',
                         followers_url: userDetails.json.html_url + '/?tab=followers'
+=======
+>>>>>>> Stashed changes
     }
-    userDetailsArray.push(userObject);
-    
-  }
-  //console.log(userDetailsArray);
+    console.log(userLoginArray);
 
-  const displaySearch = (array) => {
+    let userDetailsArray = [];
+    for (let i = 0; i < userLoginArray.length; i++) {
+        let userName = userLoginArray[i];
+        let userDetails = await getUserDetails(userName);
 
-    const searchResult = array.map((item)=>{
-      return` <div class="card-flex-container">
+        const userObject = {
+            name: userDetails.json.name,
+            experience: userDetails.json.created_at,
+            followers: userDetails.json.followers,
+            repositories: userDetails.json.public_repos,
+            location: userDetails.json.location,
+            company: userDetails.json.company,
+            avatar: userDetails.json.avatar_url,
+            github_url: userDetails.json.html_url
+        }
+        userDetailsArray.push(userObject);
+
+    }
+    //console.log(userDetailsArray);
+
+    const displaySearch = (array) => {
+
+        const searchResult = array.map((item) => {
+            return ` <div class="card-flex-container">
                 <div class="profile-card-container">
                   <div class="image-container"> 
                     <a href="${item.github_url}" target="_blank"><img src="./Images/github icon.png" id="github-icon"></a>
@@ -90,16 +102,15 @@ searchButton.addEventListener("click",async function(e){
                   </div>
                 </div>
               </div> `;
-        }
-    );
-    insertMainPage(mainDefault,searchResult).join("");
-};  
+        });
+        insertMainPage(mainDefault, searchResult).join("");
+    };
 
 
 
-  
-  displaySearch(userDetailsArray);
-  
+
+    displaySearch(userDetailsArray);
+
 
 
 

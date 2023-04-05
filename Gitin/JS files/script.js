@@ -16,21 +16,15 @@ searchButton.addEventListener("click",async function(e){
   const experience = document.getElementById("experience-entry").value;
   const repos= document.getElementById("repos-entry").value;
 
-    //     //**Target the empty element within our HTML **/
-    const redAlert = document.querySelector(".alert");
     //     //**Pass in a condition that checks if form is empty**/
     if (location == "") {
-        redAlert.innerText = "Please Fill Out Form";
-        redAlert.style.color = "red"
+        alert("Please fill out Location field");
     } else if (language == "") {
-        redAlert.innerText = "Please Fill Out Form";
-        redAlert.style.color = "red"
+        alert("Please fill out Language field")
     } else if (experience == "") {
-        redAlert.innerText = "Please Fill Out Form";
-        redAlert.style.color = "red"
+        alert("Please fill out Experience field")
     } else if (repos == "") {
-        redAlert.innerText = "Please Fill Out Form";
-        redAlert.style.color = "red"
+        alert("Please fill out Repos field")
     } else {
         console.log(location,language,experience,repos);
         const userGroupArray = await getUserGroup(language,location,repos);

@@ -1,5 +1,5 @@
 
-
+// Nice way to setup the default but there is a lot of repeated code. Try to make a function to reduce the amount of repetition here
 const profileDefault = ` <div class="card-flex-container">
 <div class="profile-card-container">
     <div class="image-container"> <img src="./Images/github icon.png" id="github-icon">

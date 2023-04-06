@@ -1,3 +1,6 @@
+/* There is a lot of repeated css code throughout the files. externalise it to a style.css
+and import that file into into all of the html files */
+
 :root {
     --bg-color: #2A3B49;
     --text-color: #111;

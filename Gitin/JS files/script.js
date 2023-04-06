@@ -12,6 +12,8 @@ searchButton.addEventListener("click",async function(e){
   const repos= document.getElementById("repos-entry").value;
 
     //     //**Pass in a condition that checks if form is empty**/
+    // Great use of form validation but the only drawback here is the user is only notified about a single field.
+    // an improvement could be to inject the text below each input so the user knows how many inputs are blank.
     if (location == "") {
         alert("Please fill out Location field");
     } else if (language == "") {
@@ -53,6 +55,7 @@ searchButton.addEventListener("click",async function(e){
           userDetailsArray.push(userObject);
       
         }
+        // This function could probably be outside of the event listener as it is cluttering the code and readability 
         //console.log(userDetailsArray);
         const displaySearch = (array) => {
           const searchResult = array.map((item)=>{

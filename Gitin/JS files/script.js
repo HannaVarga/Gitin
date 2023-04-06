@@ -1,11 +1,6 @@
 import { getUserGroup } from "./location-data.js";
 import { getUserDetails } from "./user-login-data.js";
-import { profileDefault , insertMainPage} from "./dom.js";
-const nameContainer = document.getElementById("name-container");
-const locationContainer = document.getElementById("language-container");
-const locationId = document.getElementById("location-id");
-const repositryBtn = document.getElementById("repositories-btn");
-const followersBtn = document.getElementById("followers-btn");
+import { insertMainPage} from "./dom.js";
 const searchButton = document.getElementById("search-button");
 const mainDefault = document.querySelector(".profile-cards-box");
  
